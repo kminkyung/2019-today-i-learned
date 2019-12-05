@@ -34,7 +34,7 @@ console.log('counter 2의 값 : ' + counter2.getCount());
 counter 1의 값 : 2
 counter 2의 값 : 1 
 ~~~
-위 코드에서 `counter1`과 `counter2`의 메소드들이 다른 count에 접근하는 것은 다른 렉시컬 환경의 환경 레코드에서 `count`에 접근하기 때문.<br>이러한 현상이 가능한 이유는 바로 클로저 때문이다.
+위 코드에서 `counter1`과 `counter2`의 메소드들이 다른 count에 접근하는 것은 다른 렉시컬 환경(Lexical Environment)의 환경 레코드에서 `count`에 접근하기 때문.<br>이러한 현상이 가능한 이유는 바로 클로저 때문이다.
 
 > **클로저**란 함수가 정의될 때의 렉시컬 환경을 기억하는 함수이다.
 ---
