@@ -10,8 +10,8 @@ console.log(add(1, 2));
 // }
 // printArguments(1, 2, 3); // 화살표함수는 기본함수와 다르게 arguments 객체가 만들어지지 않아 에러가 발생
 
-function printArguments (...arguments){
-	console.log(printArguments(arguments));
+function printArguments (...args){
+	console.log(printArguments(...args));
 }
 printArguments(1, 2, 3);
 
