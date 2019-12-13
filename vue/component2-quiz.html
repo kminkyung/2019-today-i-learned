@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Vue Component Registration</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+	<div id="app">
+		<child-component></child-component>
+		<sibling-component v-bind:propsdata="anotherMessage"></sibling-component>
+	</div>
+
+	<script>
+		Vue.component('child-component', {
+			props: ['propsdata'],
+			template: '<p>{{ propsdata }}</p>'
+		});
+		Vue.component('sibling-component', {
+			props: ['propsdata'],
+			template: '<p>{{ propsdata }}</p>'
+		})
+		var app = new Vue({
+			el: '#app',
+			data: {
+				anotherMessage: 'Hello Vue! passed from Parent Component'
+			}
+		});
+	</script>
+</body>
+
+</html>
