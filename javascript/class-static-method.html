@@ -26,4 +26,21 @@ console.log(gum);
 const cloth = new DeposableProduct(1, '옷', 2000);
 const taxPriceofCloth = DeposableProduct.getTaxPrice(cloth);
 console.log(taxPriceofCloth);
+
+console.clear();
+
+class ProductWithCode {
+	static get CODE_PREFIX() {
+		return "PRODUCT-";
+	}
+	constructor(id) {
+		this.id;
+		this.code = ProductWithCode.CODE_PREFIX + id;
+	}
+}
+
+const product1 = new ProductWithCode("001");
+console.log(typeof ProductWithCode.CODE_PREFIX());
+console.log(product1.code);
+
 </script>
